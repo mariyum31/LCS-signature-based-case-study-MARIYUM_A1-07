@@ -339,12 +339,90 @@ def process_signature(image_path):
 if __name__ == "__main__":
 
     print("\n======================================")
-    print("LCS BASED SIGNATURE MATCHING SYSTEM")
+    print("LCS BASED SIGNATURE MATCHING SYSTEM - case1")
     print("======================================")
 
     # Change filenames according to your images
     signature1_path = "signature1.jpeg"
     signature2_path = "signature2.jpeg"
+
+    try:
+
+        # Process first signature
+        signature_string1 = process_signature(
+            signature1_path
+        )
+
+        # Process second signature
+        signature_string2 = process_signature(
+            signature2_path
+        )
+
+        # Stage 6: LCS Comparison
+        comparator = LCSComparator()
+
+        lcs, lcs_length, similarity = comparator.similarity_score(
+            signature_string1,
+            signature_string2
+        )
+
+        print("\n======================================")
+        print("FINAL COMPARISON RESULT")
+        print("======================================")
+
+        print("\nSignature 1 String:")
+        print(signature_string1)
+
+        print("\nSignature 2 String:")
+        print(signature_string2)
+
+        print("\nLongest Common Subsequence:")
+        print(lcs)
+
+        print("\nLCS Length:")
+        print(lcs_length)
+
+        print("\nSimilarity Score:")
+        print(f"{similarity:.2f}%")
+
+        print("\n======================================")
+
+        # Simple interpretation
+        if similarity >= 75:
+            print("RESULT: Signatures are highly similar")
+
+        elif similarity >= 50:
+            print("RESULT: Signatures are moderately similar")
+
+        else:
+            print("RESULT: Signatures are different")
+
+        print("======================================\n")
+
+    except FileNotFoundError:
+
+        print("\nERROR:")
+        print("One or both signature image files were not found.")
+        print("Make sure signature1.png and signature2.png")
+        print("are inside the same folder as main.py")
+
+    except Exception as e:
+
+        print("\nAn error occurred:")
+        print(e)
+
+
+
+
+if __name__ == "__main__":
+
+    print("\n======================================")
+    print("LCS BASED SIGNATURE MATCHING SYSTEM - case2")
+    print("======================================")
+
+    # Change filenames according to your images
+    signature1_path = "signature1.jpeg"
+    signature2_path = "signature1.jpeg"
 
     try:
 
