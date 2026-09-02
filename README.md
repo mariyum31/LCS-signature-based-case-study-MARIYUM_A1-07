@@ -9,7 +9,6 @@ The system converts signature images into compact 16-character representations a
 ## Workflow
 Signature Images
        ↓
-       
 Grayscale + Resize (64×64)
        ↓
 Binary Matrix
