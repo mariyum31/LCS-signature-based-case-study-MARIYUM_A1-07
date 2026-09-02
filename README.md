@@ -44,6 +44,7 @@ Similarity (%) = (LCS Length / 16) × 100
 
 
 ##  Project Structure
+
 LCS-Signature-Matching/
 │
 ├── main.py
@@ -83,4 +84,5 @@ Result: Signatures are highly similar
 
 ##  Author
 **MARIYUM KHAN BAHADUR**
+
 Design and Analysis of Algorithms  Project
