@@ -1,6 +1,6 @@
 # Offline Signature Matching Using LCS
 
-A **Data Structures & Algorithms project** that compares handwritten signature images using the **Longest Common Subsequence (LCS)** algorithm.
+A **Design and Analysis of Algorithms project** that compares handwritten signature images using the **Longest Common Subsequence (LCS)** algorithm.
 
 The system converts signature images into compact 16-character representations and uses LCS with Dynamic Programming to calculate their similarity.
 
@@ -43,7 +43,7 @@ Similarity Score
 Similarity (%) = (LCS Length / 16) × 100
 
 
-## 📁 Project Structure
+##  Project Structure
 LCS-Signature-Matching/
 │
 ├── main.py
